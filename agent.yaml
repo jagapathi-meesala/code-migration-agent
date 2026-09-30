@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: code-migration-agent
+version: 1.0.0
+description: A framework-independent agent for analyzing, transforming, comparing, and validating Python code migrations.
+license: MIT
+skills:
+  - migration-analysis
+  - safe-python-migration
+  - migration-validation
+tools:
+  - analyze-source
+  - migrate-python
+  - compare-versions
+  - validate-migration
+tags:
+  - code-migration
+  - python
+  - portability
+  - static-analysis
+metadata:
+  domain: software-engineering
+  implementation: framework-independent
