@@ -1,0 +1,10 @@
+name: validate-migration
+description: Validate migrated Python source for syntax and simple migration safety conditions.
+input_schema:
+  type: object
+  required:
+    - source
+  properties:
+    source:
+      type: string
+  additionalProperties: false

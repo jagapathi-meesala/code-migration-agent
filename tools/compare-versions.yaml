@@ -1,0 +1,13 @@
+name: compare-versions
+description: Produce a unified diff and change statistics between source versions.
+input_schema:
+  type: object
+  required:
+    - before
+    - after
+  properties:
+    before:
+      type: string
+    after:
+      type: string
+  additionalProperties: false

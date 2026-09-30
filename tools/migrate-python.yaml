@@ -1,0 +1,15 @@
+name: migrate-python
+description: Apply deterministic, syntax-aware Python migration rules without executing source code.
+input_schema:
+  type: object
+  required:
+    - source
+    - rules
+  properties:
+    source:
+      type: string
+    rules:
+      type: array
+      items:
+        type: string
+  additionalProperties: false

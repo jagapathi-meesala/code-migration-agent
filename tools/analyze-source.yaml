@@ -1,0 +1,10 @@
+name: analyze-source
+description: Analyze Python source for imports, syntax validity, functions, classes, and migration-relevant constructs.
+input_schema:
+  type: object
+  required:
+    - source
+  properties:
+    source:
+      type: string
+  additionalProperties: false
