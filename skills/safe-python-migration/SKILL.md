@@ -1,19 +1,24 @@
+---
+name: safe-python-migration
+description: Apply conservative Python source transformations for explicitly supported migration rules.
+---
+
 # Safe Python Migration
 
 ## Purpose
-Apply explicit, bounded source transformations to Python code.
+Apply deterministic Python source transformations without executing the source program.
 
 ## Inputs
-Python source and a list of named migration rules.
+Python source code and an explicit list of migration rules.
 
 ## Processing
-The implementation parses source with AST and applies only supported transformations. Unsupported rules are collected in the output instead of being guessed.
+Parse the source using Python AST processing and apply only explicitly supported transformation rules.
 
 ## Outputs
 Migrated source, applied rules, and unsupported rules.
 
 ## Limitations
-Only the documented migration rules are supported and no source code is executed.
+Only supported deterministic transformations are applied. Runtime behavior and semantic equivalence are not guaranteed.
 
 ## Expected Behavior
-A valid source remains parseable after supported transformations, while malformed source is rejected through structured error handling.
+Supported rules are applied deterministically; unsupported rules are reported instead of being guessed.

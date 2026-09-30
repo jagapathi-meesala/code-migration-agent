@@ -1,19 +1,24 @@
+---
+name: migration-validation
+description: Validate migrated Python source for syntax integrity and migration safety conditions.
+---
+
 # Migration Validation
 
 ## Purpose
-Provide a static safety check after migration.
+Validate migrated Python source using deterministic static checks.
 
 ## Inputs
-A non-empty Python source string.
+Migrated Python source code.
 
 ## Processing
-The tool parses the source and inspects the AST for unsafe dynamic execution calls.
+Parse the source using Python AST processing and identify syntax errors and selected unsafe dynamic execution patterns.
 
 ## Outputs
-A validity flag and structured issue list.
+Validation status and structured validation issues.
 
 ## Limitations
-Static checks do not prove runtime correctness, dependency compatibility, or behavioral equivalence.
+Static validation cannot prove runtime behavior, integration correctness, or semantic equivalence.
 
 ## Expected Behavior
-Syntax errors and unsafe dynamic execution constructs are surfaced rather than hidden.
+Valid source passes structural checks unless configured safety conditions are detected; invalid source produces structured validation information.

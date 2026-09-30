@@ -1,3 +1,8 @@
+---
+name: migration-analysis
+description: Analyze Python source code for migration targets, compatibility issues, and transformation requirements.
+---
+
 # Migration Analysis
 
 ## Purpose
